@@ -14,18 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [
-        'nome' => 'Mariano',
-        'cognome' => 'Marchionna',
-        'eta' => 21,
-        'hobbies' => [
-            'calcio',
-            'videogiochi',
-            'tecnologia',
-            'viaggi',
-            'serie tv'
-        ] 
-    ];
+    return view('home');
+})->name('home');;
 
-    return view('home', $data);
-});
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contatti');
+
+Route::get('/form', function () {
+    return view('form');
+})->name('form');;
+
+Route::get('/terms', function () {
+    return view('terms');
+})->name('termini');;
+
+Route::get('/privacy', function () {
+    return view('privacy');
+})->name('privacy');;

@@ -9,14 +9,41 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            height: 80px;
+            width: 100%;
+            background-color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            transform: scale(1.4);
+        }
+    </style>
+
+
     <body>
-        <h1>IO</h1>
-        <h2>{{ $nome }} {{ $cognome }}, {{ $eta }} anni</h2>
-        <h2>Passioni: </h2>
-        <ul>
-            @foreach ($hobbies as $hobby)
-            <li>{{ $hobby }}</li>
-            @endforeach
-        </ul>
+        <header>
+            <a href="{{  route('contatti') }}">Contact</a>
+            <a href="{{  route('form') }}">Form</a>
+            <a href="{{  route('termini') }}">Terms</a>
+            <a href="{{  route('privacy') }}">Privacy</a>
+        </header>
     </body>
 </html>
