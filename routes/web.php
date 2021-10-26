@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        'nome' => 'Mariano',
+        'cognome' => 'Marchionna',
+        'eta' => 21,
+        'hobbies' => [
+            'calcio',
+            'videogiochi',
+            'tecnologia',
+            'viaggi',
+            'serie tv'
+        ] 
+    ];
+
+    return view('home', $data);
 });

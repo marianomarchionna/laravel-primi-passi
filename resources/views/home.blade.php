@@ -10,6 +10,13 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <h1>Hello World</h1>
+        <h1>IO</h1>
+        <h2>{{ $nome }} {{ $cognome }}, {{ $eta }} anni</h2>
+        <h2>Passioni: </h2>
+        <ul>
+            @foreach ($hobbies as $hobby)
+            <li>{{ $hobby }}</li>
+            @endforeach
+        </ul>
     </body>
 </html>
